@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class BodyWeight {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("please input your height(m)：");
+        double height = sc.nextDouble();
+        System.out.print("please input your weight(kg)：");
+        double weight = sc.nextDouble();
+        double bmi = weight / (height * height);
+        System.out.printf("Your BMI is：%.2f%n", bmi);
+        if (bmi < 18.5) {
+            System.out.println("thin");
+        } else if (bmi < 24) {
+            System.out.println("normal");
+        } else if (bmi < 28) {
+            System.out.println("fat");
+        } else {
+            System.out.println("tank!!!");
+        }
+        sc.close();
+    }
+}
